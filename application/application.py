@@ -9,13 +9,16 @@ from application.helpers import *
 import openai
 import os
 
-app = Flask(__name__)
+
+app = Flask(__name__, template_folder=TEMPLATES_PATH)
+app.jinja_env.filters["is_active"] = is_active
+app.jinja_env.filters["get_language_image"] = get_language_image
+
+app.config["CACHE_TYPE"] = "simple"
+app.config["CACHE_DEFAULT_TIMEOUT"] = 3600
+cache = Cache(app)
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
-
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 @app.route('/generate', methods=['POST'])
 def generate():
@@ -29,14 +32,6 @@ def generate():
     )
     generated_text = response['choices'][0]['message']['content'].strip()
     return render_template('index.html', response=generated_text)
-
-app = Flask(__name__, template_folder=TEMPLATES_PATH)
-app.jinja_env.filters["is_active"] = is_active
-app.jinja_env.filters["get_language_image"] = get_language_image
-
-app.config["CACHE_TYPE"] = "simple"
-app.config["CACHE_DEFAULT_TIMEOUT"] = 3600
-cache = Cache(app)
 
 
 @app.route("/")
