@@ -3,11 +3,11 @@
 /*********************/
 
 :root {
-    --main-color: rgb(5, 97, 85);
-    --links-color: rgb(0, 172, 200);
+    --main-color: rgb(76, 156, 194);
+    --links-color: rgb(191, 172, 200);
     --links-hover-color: rgb(241, 217, 252);
-    --highlights-color: rgb(67, 5, 126);
-    --highlights-v2-color: rgb(240, 160, 11);;
+    --highlights-color: rgb(255, 255, 255);
+    --highlights-v2-color: rgb(196, 24, 8);;
     --buttons-color: rgba(255, 178, 13, 0.7);
     --buttons-hover-color: rgba(245, 191, 76, 0.7);
 }
