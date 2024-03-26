@@ -20,18 +20,7 @@ cache = Cache(app)
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
-@app.route('/generate', methods=['POST'])
-def generate():
-    prompt = request.form['prompt']
-    response = openai.ChatCompletion.create(
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
-        model="gpt-3.5-turbo-0125",
-        temperature = 0.5,
-    )
-    generated_text = response['choices'][0]['message']['content'].strip()
-    return render_template('index.html', response=generated_text)
+
 
 
 @app.route("/")
@@ -96,9 +85,23 @@ def contact():
     return render_template("contact.html")
 
 
+
 @app.route("/result")
 @cache.cached()
 def result():
     """Renders the 'Result' page of the website."""
 
     return render_template("result.html")
+
+@app.route('/generate', methods=['POST'])
+def generate():
+    prompt = request.form['prompt']
+    response = openai.ChatCompletion.create(
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
+        model="gpt-3.5-turbo-0125",
+        temperature = 0.5,
+    )
+    generated_text = response['choices'][0]['message']['content'].strip()
+    return render_template('home.html', response=generated_text)
