@@ -8,7 +8,7 @@ fetch("/static/text/jobTitles.json")
         var typed = new Typed("#typing-text", {
             strings: data.text,
             typeSpeed: 100,  // Speed at which characters are typed
-            startDelay: 2000,  // Delay before typing starts (in milliseconds)
+            startDelay: 1000,  // Delay before typing starts (in milliseconds)
             loop: true  // Whether or not to loop the typing animation
         });
     });
