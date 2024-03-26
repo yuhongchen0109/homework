@@ -1,0 +1,74 @@
+{
+    "cards": [
+        {
+            "image": "https://hessenantique.com/fictional-reichsfuhrer-ss-m32-uniform-from-major-tv-series/#gallery-1",
+            "title": "Python",
+            "type": "language"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/java-coffee-cup-logo.png",
+            "title": "Java",
+            "type": "language"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/c-programming.png",
+            "title": "C",
+            "type": "language"
+        },
+        {
+            "image": "https://img.icons8.com/ios-filled/256/sql.png",
+            "title": "SQL",
+            "type":"language"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/javascript.png",
+            "title": "JavaScript",
+            "type": "language"
+        },
+        {
+            "image": "https://img.icons8.com/fluency/256/html-5.png",
+            "title": "HTML",
+            "type": "language"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/css3.png",
+            "title": "CSS",
+            "type": "language"
+        },
+        {
+            "image": "https://img.icons8.com/ios/256/flask.png",
+            "title": "Flask",
+            "type": "framework"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/pandas.png",
+            "title": "Pandas",
+            "type": "library"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/bootstrap.png",
+            "title": "Bootstrap",
+            "type":"framework"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/git.png",
+            "title": "Git VCS",
+            "type": "technology"
+        },
+        {
+            "image": "https://img.icons8.com/glyph-neue/256/github.png",
+            "title": "GitHub",
+            "type": "technology"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/microsoft-sql-server.png",
+            "title": "MS SQL",
+            "type": "technology"
+        },
+        {
+            "image": "https://img.icons8.com/color/256/linux.png",
+            "title": "Linux",
+            "type": "technology"
+        }
+    ]
+}
