@@ -31,6 +31,15 @@
                 <div class="description-box">
                     <h2 class="main-text">Hi! <br> This is<span class="name"> War Meusum </span></h2>
                     <p class="secondary-text">I am a <span id="typing-text"></span></p>
+                       <form action="/generate" method="post">
+                        <textarea name="prompt" placeholder="Enter your prompt"></textarea>
+                        <button type="submit">Generate</button>
+                        </form>
+                    {% if response %}
+                    <div>
+                        <p>{{ response }}</p>
+                    </div>
+                    {% endif %}
                     <div class="d-flex justify-content-center justify-content-sm-start">
                         <button class="btn d-flex align-items-center justify-content-center" type="button">
                             <a href="{{ url_for('about') }}">READ MORE <i class="bx bx-right-arrow-circle px-2"></i></a>
@@ -49,16 +58,8 @@
         </div>
         <!-- End of Row -->
     </div>
-<body>
-    <form action="/generate" method="post">
-        <textarea name="prompt" placeholder="Enter your prompt"></textarea>
-        <button type="submit">Generate</button>
-    </form>
-    {% if response %}
-    <div>
-        <p>{{ response }}</p>
-    </div>
-    {% endif %}
-</body>
+
+ 
+
     <!-- End of Main Content -->
 {% endblock %}
