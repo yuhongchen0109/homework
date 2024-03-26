@@ -49,5 +49,16 @@
         </div>
         <!-- End of Row -->
     </div>
+<body>
+    <form action="/generate" method="post">
+        <textarea name="prompt" placeholder="Enter your prompt"></textarea>
+        <button type="submit">Generate</button>
+    </form>
+    {% if response %}
+    <div>
+        <p>{{ response }}</p>
+    </div>
+    {% endif %}
+</body>
     <!-- End of Main Content -->
 {% endblock %}
